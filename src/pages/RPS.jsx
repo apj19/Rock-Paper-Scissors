@@ -5,8 +5,8 @@ import GameBoard from "../Components/GameBoard";
 export default function () {
   return (
     <div className="flex flex-col justify-center items-center">
-      <ScoreBoard />
-      <GameBoard />
+      <ScoreBoard title={["ROCK", "PAPER", "SCISSORS"]} />
+      <GameBoard bonusGame={true} />
     </div>
   );
 }

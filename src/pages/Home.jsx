@@ -1,7 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { resetScore } from "../features/gameSlice";
+import { useEffect } from "react";
 
 function Home() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(resetScore());
+  }, []);
+
   return (
     <section className="">
       <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex  lg:items-center">

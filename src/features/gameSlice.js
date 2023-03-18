@@ -26,12 +26,15 @@ export const gameSlice = createSlice({
         if(state.value != 0)
         state.value -=1;
       }
-    }
+    },
+    resetScore: (state) => {
+      state.value = 0;
+    },
     
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { playersChoice, restartGame,scoreUpdate } = gameSlice.actions
+export const { playersChoice, restartGame,scoreUpdate ,resetScore} = gameSlice.actions
 
 export default gameSlice.reducer
