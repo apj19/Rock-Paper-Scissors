@@ -8,7 +8,7 @@ function GameBoard() {
   const PlayerSelection = useSelector((state) => state.game.playerSelection);
 
   return (
-    <div>
+    <div className="flex justify-center items-center  ">
       {!showchoicesBoard && <PlayerOptions />}
       {showchoicesBoard && <Choices player={PlayerSelection} />}
     </div>
