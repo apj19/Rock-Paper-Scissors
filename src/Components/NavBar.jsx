@@ -8,10 +8,6 @@ function NavBar() {
         <i className="fa-solid fa-house text-white text-[2rem]"></i>
       </Link>
       <div>
-        <a href="https://github.com/apj19/Rock-Paper-Scissors" target="_blank">
-          <i className="fa-brands fa-square-github text-white text-[2rem] mr-4"></i>
-        </a>
-
         <a
           href="https://www.linkedin.com/in/akshay-jadhav-01737711b/"
           target="_blank"
