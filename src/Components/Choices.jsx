@@ -13,7 +13,7 @@ function Choices({ player, game }) {
   const dispatch = useDispatch();
   let houceChoice = "";
   let list = [];
-  if (game == "bonus") {
+  if (!game) {
     list = bonusOptionsList;
   } else {
     list = optionsList;
@@ -22,11 +22,12 @@ function Choices({ player, game }) {
   useEffect(() => {
     function housechoice() {
       setTimeout(() => {
-        if (game == "bonus") {
+        if (!game) {
           houceChoice = Math.ceil(Math.random() * 4);
         } else {
           houceChoice = Math.ceil(Math.random() * 2);
         }
+        // console.log(game, houceChoice);
 
         setHousePicked(houceChoice);
       }, 1000);
